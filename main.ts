@@ -8,6 +8,9 @@ const argPort = parse(args).port;
 const app = new Application();
 
 app
+  .get("/", () => {
+    return "HEllo World";
+  })
   .get("/github", async () => {
     return await (await fetch("https://github.com/FarazzShaikh")).text();
   })

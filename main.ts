@@ -1,11 +1,14 @@
 import { Application } from "https://deno.land/x/abc@v1.3.3/mod.ts";
+import { parse } from "https://deno.land/std/flags/mod.ts";
+
+const { args } = Deno;
+const DEFAULT_PORT = 8000;
+const argPort = parse(args).port;
 
 const app = new Application();
-
-console.log("http://localhost:8080/");
 
 app
   .get("/github", async () => {
     return await (await fetch("https://github.com/FarazzShaikh")).text();
   })
-  .start({ port: 3000 });
+  .start({ port: argPort ? Number(argPort) : DEFAULT_PORT });

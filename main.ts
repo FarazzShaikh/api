@@ -7,6 +7,9 @@ const argPort = parse(args).port;
 
 const app = new Application();
 
+const port = argPort ? Number(argPort) : DEFAULT_PORT;
+console.log(port);
+
 app
   .get("/", () => {
     return "HEllo World";
@@ -14,4 +17,4 @@ app
   .get("/github", async () => {
     return await (await fetch("https://github.com/FarazzShaikh")).text();
   })
-  .start({ port: argPort ? Number(argPort) : DEFAULT_PORT });
+  .start({ port: port });

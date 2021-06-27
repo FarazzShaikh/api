@@ -14,7 +14,11 @@ app
   .get("/", () => {
     return "HEllo World";
   })
-  .get("/github", async () => {
-    return await (await fetch("https://github.com/FarazzShaikh")).text();
+  .get("/github", async (r) => {
+    const res = await (await fetch("https://github.com/FarazzShaikh")).text();
+
+    r.response.headers.append("Access-Control-Allow-Origin", "*");
+    console.log(r.response);
+    return res;
   })
   .start({ port: port });

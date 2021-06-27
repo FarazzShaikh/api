@@ -1,1 +1,1 @@
-web: deno run --allow-net=github.com index.ts --port=${PORT}
+web: deno run --allow-net index.ts --port=${PORT}

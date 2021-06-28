@@ -21,6 +21,9 @@ router.get("/", ({ response }: { response: any }) => {
 router.get("/github", async ({ response }: { response: any }) => {
   response.body = await (await fetch("https://github.com/FarazzShaikh")).text();
 });
+router.get("/.well-known/acme-challenge/dpUU_0Sj4LFfsyfhAGinTxx9u7AdOnCHHV99U2aOcXA", async () => {
+  return await (await fetch("./acme-challenge/data.txt")).text();
+});
 app.use(router.routes());
 app.use(router.allowedMethods());
 

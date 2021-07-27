@@ -1,7 +1,7 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 import { parse } from "https://deno.land/std/flags/mod.ts";
 import { oakCors } from "https://deno.land/x/cors/mod.ts";
-import * as path from "https://deno.land/std/path/mod.ts";
+import "https://deno.land/x/dotenv/load.ts";
 
 try {
   const { args } = Deno;
@@ -15,6 +15,8 @@ try {
   app.use(oakCors());
 
   const router = new Router();
+  const LIST_ID = Deno.env.get("LIST_ID");
+  const KEY = Deno.env.get("KEY");
 
   router.get("/", ({ response }: { response: any }) => {
     response.body = {
@@ -22,14 +24,36 @@ try {
     };
   });
 
-  router.get("/github", async ({ response }: { response: any }) => {
-    response.body = await (await fetch("https://github.com/FarazzShaikh")).text();
-  });
+  router.get("/subscribe", async ({ request, response }) => {
+    const body = request.body({ type: "form-data" });
+    const data = (await body.value.read()).fields;
 
-  router.get("/.well-known/acme-challenge/dpUU_0Sj4LFfsyfhAGinTxx9u7AdOnCHHV99U2aOcXA", async ({ response }: { response: any }) => {
-    const __dirname = new URL(".", import.meta.url).pathname;
-    const p = path.resolve(__dirname, "./acme-challenge/data.txt");
-    response.body = await Deno.readTextFile(p);
+    const { email, name } = data;
+
+    try {
+      const res = await fetch(`https://us6.api.mailchimp.com/3.0/lists/${LIST_ID}/members`, {
+        body: JSON.stringify({
+          email_address: email,
+          status: "pending",
+          merge_fields: {
+            FNAME: name,
+          },
+        }),
+        headers: {
+          Authorization: `anystring ${KEY}`,
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      response.body = res.body;
+      response.status = res.status;
+      response.headers = res.headers;
+    } catch (error) {
+      console.error(error);
+      response.status = 500;
+    }
   });
 
   app.use(router.routes());

@@ -1,5 +1,5 @@
 <p align="center">
-  <h3 align="center">📖</h3>
+  <h3 align="center">🌏</h3>
   <h1 align="center">API</h1>
     <h3 align="center">api.farazshaikh.com</h3>
   

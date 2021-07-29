@@ -1,0 +1,58 @@
+{
+    "data": [
+        {
+            "name": "glNoise",
+            "disc": "A collection of GLSL noise functions for use with WebGL with an easy to use API.",
+            "lang": ["GLSL", "TypeScript"],
+            "tech": ["WebGL", "Shaders"],
+            "repo": "https://github.com/FarazzShaikh/glNoise",
+            "package": "https://www.npmjs.com/package/gl-noise",
+            "archived": false
+        },
+        {
+            "name": "THREE-CSM",
+            "disc": "Extend Three.js standard materials with your own vertex shaders!",
+            "lang": ["JavaScript"],
+            "tech": ["ThreeJS", "WebGL", "Shaders"],
+            "repo": "https://github.com/FarazzShaikh/THREE-CustomShaderMaterial",
+            "package": "https://www.npmjs.com/package/three-custom-shader-material",
+            "archived": false
+        },
+        {
+            "name": "react-three-paper",
+            "disc": "A paper-thin (~800 byte), position-aware wrapper for ThreeJS with React.",
+            "lang": ["TypeScript"],
+            "tech": ["ThreeJS", "React"],
+            "repo": "https://github.com/FarazzShaikh/react-three-paper",
+            "package": "https://www.npmjs.com/package/react-three-paper",
+            "archived": false
+        },
+        {
+            "name": "mdx-components",
+            "disc": "A Collection of MDX Components.",
+            "lang": ["JavaScript"],
+            "tech": ["React", "MDX"],
+            "repo": "https://github.com/FarazzShaikh/mdx-components",
+            "package": "https://www.npmjs.com/package/mdx-components",
+            "archived": false
+        },
+        {
+            "name": "THREE-Noise",
+            "disc": "Simple gradient noise library for use with Three.js. Now with fBm!",
+            "lang": ["JavaScript"],
+            "tech": ["ThreeJS", "WebGL"],
+            "repo": "https://github.com/FarazzShaikh/three-noise",
+            "package": "https://www.npmjs.com/package/three-noise",
+            "archived": false
+        },
+        {
+            "name": "Simple Animations",
+            "disc": "Simple Animations is a simple abstraction of the React Native Animated API.",
+            "lang": ["JavaScript"],
+            "tech": ["React Native", "iOS", "Mobile"],
+            "repo": "https://github.com/FarazzShaikh/RN-SimpleAnimations",
+            "package": "https://www.npmjs.com/package/@farazzshaikh/react-native-simple-animations",
+            "archived": true
+        }
+    ]
+}

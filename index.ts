@@ -1,7 +1,14 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 import { parse } from "https://deno.land/std/flags/mod.ts";
 import { oakCors } from "https://deno.land/x/cors/mod.ts";
+
 import "https://deno.land/x/dotenv/load.ts";
+
+const validRoutes = ["apps", "libraries", "experiments"];
+
+function isValidRoute(route: string) {
+  return validRoutes.includes(route);
+}
 
 try {
   const { args } = Deno;
@@ -18,10 +25,25 @@ try {
   const LIST_ID = Deno.env.get("LIST_ID");
   const KEY = Deno.env.get("KEY");
 
-  router.get("/", ({ response }: { response: any }) => {
-    response.body = {
-      message: "hello world",
-    };
+  router.get("/", ({ response }) => {
+    response.body = "Hello World";
+  });
+
+  router.get("/:route", async ({ params, response }) => {
+    try {
+      const { route } = params;
+
+      if (!isValidRoute(route!)) throw new Error(`Invalid Route: /${route}`);
+
+      response.body = await Deno.readFile(`./data/${route}.json`);
+      response.headers.set("content-type", "application/json");
+      response.status = 200;
+    } catch (error) {
+      console.error(error);
+      response.body = "Internal Server Error: " + error.message;
+      response.headers.set("content-type", "text/plain");
+      response.status = 500;
+    }
   });
 
   router.get("/subscribe", async ({ request, response }) => {

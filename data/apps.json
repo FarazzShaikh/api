@@ -1,0 +1,58 @@
+{
+    "data": [
+        {
+            "name": "This site",
+            "type": "site",
+            "disc": "My portfolio site",
+            "lang": ["JavaScript", "HTML", "Sass"],
+            "tech": ["WebGL", "ThreeJS", "Jekyll"],
+            "repo": "https://github.com/FarazzShaikh/home",
+            "archived": false
+        },
+        {
+            "name": "Blog",
+            "type": "site",
+            "disc": "My blog site",
+            "lang": ["JavaScript", "Sass"],
+            "tech": ["React", "WebGL", "ThreeJS", "Gatsby"],
+            "repo": "https://blog.farazshaikh.com",
+            "archived": false
+        },
+        {
+            "name": "API",
+            "type": "API",
+            "disc": "My personal API",
+            "lang": ["TypeScript"],
+            "tech": ["Deno", "Heroku"],
+            "repo": "https://github.com/FarazzShaikh/api",
+            "archived": false
+        },
+        {
+            "name": "Terrain Builder",
+            "type": "web-app",
+            "disc": "Procedural terrain using Three.js and perlin noise, Now Accelerated by your GPU!",
+            "lang": ["JavaScript", "HTML", "CSS"],
+            "tech": ["React", "WebGL", "ThreeJS"],
+            "repo": "https://github.com/FarazzShaikh/Terrain-Builder",
+            "archived": false
+        },
+        {
+            "name": "Lunar Lander",
+            "type": "game",
+            "disc": "A Sci-Fi Survival Shooter, made entirely using the DOM and JavaScript for a university coursework.",
+            "lang": ["JavaScript", "HTML", "CSS"],
+            "tech": ["Firebase", "FaunaDB", "SocketIO", "DOM"],
+            "repo": "https://github.com/FarazzShaikh/LunarLander",
+            "archived": true
+        },
+        {
+            "name": "WebAssemblr",
+            "type": "CLI",
+            "disc": "A dead simple way to call WebAssembly form your script.",
+            "lang": ["TypeScript", "C++", "Shell"],
+            "tech": ["WebAssembly"],
+            "repo": "https://github.com/FarazzShaikh/WebAssemblr",
+            "archived": true
+        }
+    ]
+}

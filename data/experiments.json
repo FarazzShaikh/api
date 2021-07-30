@@ -6,7 +6,7 @@
             "lang": ["JavaScript", "GLSL"],
             "tech": ["ThreeJS", "WebGL", "Shaders"],
             "repo": "https://github.com/FarazzShaikh/experiments/tree/master/Particles/1M%20Particles",
-            "demo": "https://farazzshaikh.github.io/experiments/Particles/1M%20Particles/index.html",
+            "link": "https://farazzshaikh.github.io/experiments/Particles/1M%20Particles/index.html",
             "blog": "https://blog.farazshaikh.com/stories/rendering-1-m-particles/"
         },
         {
@@ -15,7 +15,7 @@
             "lang": ["JavaScript", "GLSL"],
             "tech": ["ThreeJS", "WebGL", "Shaders"],
             "repo": "https://github.com/FarazzShaikh/experiments/tree/master/3D/Waves",
-            "demo": "https://farazzshaikh.github.io/experiments/3D/Waves/index.html",
+            "link": "https://farazzshaikh.github.io/experiments/3D/Waves/index.html",
             "blog": null
         },
         {
@@ -24,7 +24,7 @@
             "lang": ["JavaScript", "GLSL"],
             "tech": ["ThreeJS", "WebGL", "Shaders"],
             "repo": "https://github.com/FarazzShaikh/experiments/tree/master/3D/Planet",
-            "demo": "https://farazzshaikh.github.io/experiments/3D/Planet/index.html",
+            "link": "https://farazzshaikh.github.io/experiments/3D/Planet/index.html",
             "blog": null
         },
         {
@@ -33,7 +33,7 @@
             "lang": ["JavaScript", "GLSL"],
             "tech": ["ThreeJS", "WebGL", "Shaders"],
             "repo": "https://github.com/farazshaikh",
-            "demo": "https://github.com/farazshaikh",
+            "link": "https://github.com/farazshaikh",
             "blog": null
         }
     ]

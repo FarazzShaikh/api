@@ -7,6 +7,7 @@
             "tech": ["WebGL", "Shaders"],
             "repo": "https://github.com/FarazzShaikh/glNoise",
             "package": "https://www.npmjs.com/package/gl-noise",
+            "link": "https://farazzshaikh.github.io/glNoise/examples/index.html",
             "archived": false
         },
         {
@@ -16,6 +17,7 @@
             "tech": ["ThreeJS", "WebGL", "Shaders"],
             "repo": "https://github.com/FarazzShaikh/THREE-CustomShaderMaterial",
             "package": "https://www.npmjs.com/package/three-custom-shader-material",
+            "link": "https://farazzshaikh.github.io/THREE-CustomShaderMaterial/example/index.html",
             "archived": false
         },
         {
@@ -25,6 +27,7 @@
             "tech": ["ThreeJS", "React"],
             "repo": "https://github.com/FarazzShaikh/react-three-paper",
             "package": "https://www.npmjs.com/package/react-three-paper",
+            "link": "https://farazzshaikh.github.io/react-three-paper/",
             "archived": false
         },
         {
@@ -34,6 +37,7 @@
             "tech": ["React", "MDX"],
             "repo": "https://github.com/FarazzShaikh/mdx-components",
             "package": "https://www.npmjs.com/package/mdx-components",
+            "link": null,
             "archived": false
         },
         {
@@ -43,6 +47,7 @@
             "tech": ["ThreeJS", "WebGL"],
             "repo": "https://github.com/FarazzShaikh/three-noise",
             "package": "https://www.npmjs.com/package/three-noise",
+            "link": "https://farazzshaikh.github.io/three-noise/example/index.html",
             "archived": false
         },
         {
@@ -52,6 +57,7 @@
             "tech": ["React Native", "iOS", "Mobile"],
             "repo": "https://github.com/FarazzShaikh/RN-SimpleAnimations",
             "package": "https://www.npmjs.com/package/@farazzshaikh/react-native-simple-animations",
+            "link": null,
             "archived": true
         }
     ]

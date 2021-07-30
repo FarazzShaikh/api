@@ -2,20 +2,22 @@
     "data": [
         {
             "name": "This site",
-            "type": "site",
+            "type": "Website",
             "disc": "My portfolio site",
-            "lang": ["JavaScript", "HTML", "Sass"],
+            "lang": ["JavaScript", "HTML", "Sass", "GLSL"],
             "tech": ["WebGL", "ThreeJS", "Jekyll"],
             "repo": "https://github.com/FarazzShaikh/home",
+            "link": "https://farazshaikh.com",
             "archived": false
         },
         {
             "name": "Blog",
-            "type": "site",
+            "type": "Website",
             "disc": "My blog site",
-            "lang": ["JavaScript", "Sass"],
+            "lang": ["JavaScript", "Sass", "GLSL"],
             "tech": ["React", "WebGL", "ThreeJS", "Gatsby"],
-            "repo": "https://blog.farazshaikh.com",
+            "repo": "https://github.com/FarazzShaikh/blog",
+            "link": "https://blog.farazshaikh.com",
             "archived": false
         },
         {
@@ -25,24 +27,27 @@
             "lang": ["TypeScript"],
             "tech": ["Deno", "Heroku"],
             "repo": "https://github.com/FarazzShaikh/api",
+            "link": "https://api.farazzshaikh.com",
             "archived": false
         },
         {
             "name": "Terrain Builder",
-            "type": "web-app",
+            "type": "Web-App",
             "disc": "Procedural terrain using Three.js and perlin noise, Now Accelerated by your GPU!",
-            "lang": ["JavaScript", "HTML", "CSS"],
+            "lang": ["JavaScript", "HTML", "CSS", "GLSL"],
             "tech": ["React", "WebGL", "ThreeJS"],
             "repo": "https://github.com/FarazzShaikh/Terrain-Builder",
+            "link": "https://terrain-builder.herokuapp.com/",
             "archived": false
         },
         {
             "name": "Lunar Lander",
-            "type": "game",
+            "type": "Game",
             "disc": "A Sci-Fi Survival Shooter, made entirely using the DOM and JavaScript for a university coursework.",
             "lang": ["JavaScript", "HTML", "CSS"],
             "tech": ["Firebase", "FaunaDB", "SocketIO", "DOM"],
             "repo": "https://github.com/FarazzShaikh/LunarLander",
+            "link": null,
             "archived": true
         },
         {
@@ -52,6 +57,7 @@
             "lang": ["TypeScript", "C++", "Shell"],
             "tech": ["WebAssembly"],
             "repo": "https://github.com/FarazzShaikh/WebAssemblr",
+            "link": null,
             "archived": true
         }
     ]

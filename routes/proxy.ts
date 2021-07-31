@@ -22,7 +22,7 @@ export async function Proxy({ params, response }: Context) {
 
       response.body = res.body;
       response.status = res.status;
-      response.headers = res.headers;
+      //   response.headers = res.headers;
     } catch (error) {
       console.error(error);
       response.status = 500;

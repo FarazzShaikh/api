@@ -21,8 +21,19 @@ export async function RateLimit(ctx: any, next: any) {
     for (const header in headers) {
       ctx.response.headers.set(header, headers[header]);
     }
-  } catch (_error) {
+  } catch (error) {
     ctx.response.status = 429;
     ctx.response.body = "Too Many Requests";
+
+    const headers: { [key: string]: string } = {
+      "Retry-After": `${error._msBeforeNext / 1000}`,
+      "X-RateLimit-Limit": `${rateLimiter.points}`,
+      "X-RateLimit-Remaining": `${error._remainingPoints}`,
+      "X-RateLimit-Reset": `${new Date(Date.now() + error._msBeforeNext)}`,
+    };
+
+    for (const header in headers) {
+      ctx.response.headers.set(header, headers[header]);
+    }
   }
 }

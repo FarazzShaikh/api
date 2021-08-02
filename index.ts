@@ -21,7 +21,7 @@ try {
   router.get("/", Index);
   router.get("/:route", Data);
   router.get("/ghproxy/:route", Proxy);
-  router.get("/subscribe", Subscribe);
+  router.post("/subscribe", Subscribe);
 
   app.use(RateLimit);
   app.use(oakCors());

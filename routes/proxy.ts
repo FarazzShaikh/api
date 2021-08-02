@@ -22,7 +22,9 @@ export async function Proxy({ params, response }: Context) {
 
       response.body = res.body;
       response.status = res.status;
-      //   response.headers = res.headers;
+      for (const pair of res.headers.entries()) {
+        response.headers.append(pair[0], pair[1]);
+      }
     } catch (error) {
       console.error(error);
       response.status = 500;

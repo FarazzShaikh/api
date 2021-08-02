@@ -7,7 +7,7 @@ import { Data } from "./routes/data.ts";
 import { Proxy } from "./routes/proxy.ts";
 import { Subscribe } from "./routes/subscribe.ts";
 
-import { RateLimit } from "./middleware/RateLimit.ts";
+// import { RateLimit } from "./middleware/RateLimit.ts";
 
 try {
   const { args } = Deno;
@@ -23,7 +23,7 @@ try {
   router.get("/ghproxy/:route", Proxy);
   router.post("/subscribe", Subscribe);
 
-  app.use(RateLimit);
+  //   app.use(RateLimit);
   app.use(oakCors());
   app.use(router.routes());
   app.use(router.allowedMethods());

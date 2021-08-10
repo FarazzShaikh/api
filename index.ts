@@ -6,6 +6,9 @@ import { Index } from "./routes/index.ts";
 import { Data } from "./routes/data.ts";
 import { Proxy } from "./routes/proxy.ts";
 import { Subscribe } from "./routes/subscribe.ts";
+import { Cors } from "./routes/cors.ts";
+// import { Vanity } from "./routes/vanity.ts";
+// import { Claps } from "./routes/claps.ts";
 
 // import { RateLimit } from "./middleware/RateLimit.ts";
 
@@ -18,10 +21,15 @@ try {
   const router = new Router();
   const app = new Application();
 
+  router.get("/ghproxy/:route", Proxy);
+  router.get("/cors/:route", Cors);
+  //   router.get("/vanity/:route", Vanity);
+  //   router.get("/claps", Claps);
+  //   router.post("/claps", Claps);
+  router.post("/subscribe", Subscribe);
+
   router.get("/", Index);
   router.get("/:route", Data);
-  router.get("/ghproxy/:route", Proxy);
-  router.post("/subscribe", Subscribe);
 
   //   app.use(RateLimit);
   app.use(oakCors());
